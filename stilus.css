@@ -33,22 +33,25 @@ header h1 {
 nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
     padding: 15px;
     background-color: rgba(133, 209, 228, 0.9);
     border-radius: 75px;
     width: 45%;
     text-align: center;
+    place-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
     background-color: #e287c4;
-    padding: 10px 15px;
-    border-radius: 85px;
+    padding: 15px 1px;
+    border-radius: 35px;
     transition: background-color 0.3s, transform 0.2s;
     font-weight: bold;
+    width: 35%;
+    display: grid;
 }
 
 nav a:hover {
@@ -64,7 +67,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     border-radius: 75px;
-    margin: 50px auto;
+    margin: 50px;
     place-items: center;
 }
 
@@ -81,25 +84,28 @@ main {
     justify-content: space-between;
     align-items: center;
     margin: 55px;
+    background-image: url('kepek/divhatter.png');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .content1 {
-    background-color: rgba(253, 253, 253, 0.5);
+    background-color: rgba(253, 253, 253);
     box-shadow: 0 0 10px rgba(247, 223, 157, 1);
 }
 
 .content2 {
-    background-color: rgba(243, 239, 9, 0.5);
+    background-color: rgba(243, 239, 9);
     box-shadow: 0 0 10px rgba(243, 208, 9, 1);
 }
 
 .content3 {
-    background-color: rgba(209, 133, 228, 0.5);
+    background-color: rgba(209, 133, 228);
     box-shadow: 0 0 10px rgba(93, 4, 116, 1);
 }
 
 .content4 {
-    background-color: rgba(143, 230, 165, 0.5);
+    background-color: rgba(143, 230, 165);
     box-shadow: 0 0 10px rgba(2, 121, 32, 1);
 }
 
@@ -128,7 +134,7 @@ main {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     nav {
         grid-template-columns: 1fr;
     }
@@ -141,5 +147,8 @@ main {
     header h1 {
         font-size: 1.5rem;
         padding: 5px;
+    }
+    nav {
+        border-radius: 100px;
     }
 }
