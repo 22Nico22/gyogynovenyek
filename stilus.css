@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -35,11 +41,12 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 15px;
-    background-color: rgba(133, 209, 228, 0.9);
+    background-color: rgba(133, 209, 228, 0.5);
     border-radius: 75px;
     width: 45%;
     text-align: center;
     place-items: center;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -87,6 +94,7 @@ main {
     background-image: url('kepek/divhatter.png');
     background-size: cover;
     background-attachment: fixed;
+    transition: border-radius 0.3s ease;
 }
 
 .content1 {
@@ -132,23 +140,46 @@ main {
         font-size: 2rem;
         padding: 5px;
     }
+    nav {
+        grid-template-columns:2, 1fr;
+        padding: 10px;
+        width: 90%;
+        border-radius: 50px;
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 300px) {
-    nav {
-        grid-template-columns: 1fr;
+@media (max-width: 500px) {
+    .content1, .content2, .content3, .content4 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-size: cover;
     }
+
+    .content1 img, .content2 img, .content3 img, .content4 img {
+        display: none;
+    }
+
+    nav {
+        grid-template-columns:2, 1fr;
+        padding: 10px;
+        width: 90%;
+        border-radius: 50px;
+        font-size: 1rem;
+    }
+
     nav a {
         width: 100%;
+        padding: 12px;
     }
-    main {
-        grid-template-columns: 1fr;
-    }
+
     header h1 {
         font-size: 1.5rem;
         padding: 5px;
     }
-    nav {
-        border-radius: 100px;
+
+    main {
+        grid-template-columns: 1fr;
     }
 }
